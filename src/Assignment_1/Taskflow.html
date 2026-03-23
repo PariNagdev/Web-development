@@ -35,78 +35,92 @@
             <h3 class="cardTitle">My tasks</h3>
             <p class="cardDescription">Show List of Tasks</p>
           </header>
+        <ul class="postList">
+
+          <!-- TASK 1 -->
+          <li class="postItem">
+            <article class="postCard">
+              <header>
+              <h4 class="postTitle">Task #1: Complete Assignment</h4>
+              </header>
+      <div class="postMetaRow">
+        <span class="postBadge">TODO</span>
+        <time class="postDate" datetime="2026-03-25">25 Mar 26</time>
+      </div>
+      <footer>
+        <button class="btn deleteBtn">Delete</button>
+      </footer>
+          </article>
+         </li>
+
+              
+       <!-- TASK 2 -->
+      <li class="postItem">
+        <article class="postCard">
+        <header>
+        <h4 class="postTitle">Task #2: Study JavaScript</h4>
+        </header>
+      <div class="postMetaRow">
+        <span class="postBadge">In Progress</span>
+        <time class="postDate" datetime="2026-03-26">26 Mar 2026</time>
+      </div>
+        <footer>
+        <button class="btn deleteBtn">Delete</button>
+        </footer>
+       </article>
+     </li>
+
+              <!-- TASK 3 -->
+      <li class="postItem">
+        <article class="postCard">
+        <header>
+        <h4 class="postTitle">Task #3: Revise HTML & CSS</h4>
+        </header>
+          <div class="postMetaRow">
+          <span class="postBadge">Done</span>
+          <time class="postDate" datetime="2026-03-20">20 Mar 2026</time>
+          </div>
+      <footer>
+        <button class="btn deleteBtn">Delete</button>
+      </footer>
+    </article>
+    </li>
 
 
-          <ul class="postList">
-            <!-- TASK 1 -->
-            <li class ="postItem">
-                <article class ="postCard">
-                
-                <h4 class ="postTitle" > Task #1: Complete Assignment</h4>
-                <div class ="postMetaRow">
-                    <span class ="postBadge"> TODO </span>
-                    <time class ="postDate" >25 Mar 26 </time>
-                </div>
-                <button class ="btn deleteBtn" > Delete </button>
-            </article>
-            </li>
-
-<!-- TASK 2 -->
- <li class ="postItem">
-                <article class ="postCard">
-                
-                <h4 class ="postTitle" > Task #2: Study JavaSscript </h4>
-                <div class ="postMetaRow">
-                    <span class ="postBadge"> In Progress </span>
-                    <time class ="postDate" >26 Mar 2026 </time>
-                </div>
-                <button class ="btn deleteBtn" > Delete </button>
-            </article>
-            </li>
-<!-- TASK 3 -->
- <li class ="postItem">
-                <article class ="postCard">
-                
-                <h4 class ="postTitle" > Task #3: Revise Html & CSS</h4>
-                <div class ="postMetaRow">
-                    <span class ="postBadge"> Done </span>
-                    <time class ="postDate" >20 Mar 2026 </time>
-                </div>
-                <button class ="btn deleteBtn" > Delete </button>
-            </article>
-            </li>
-
-            <!-- TASK 4 -->
-              <li class ="postItem">
-                <article class ="postCard">
-                
-                <h4 class ="postTitle" > Task #4: Quiz Preparationt</h4>
-                <div class ="postMetaRow">
-                    <span class ="postBadge"> TODO </span>
-                    <time class ="postDate" >28 Mar 2026 </time>
-                </div>
-                <button class ="btn deleteBtn" > Delete </button>
-            </article>
-            </li>
+        <!-- TASK 4 -->
+      <li class="postItem">
+       <article class="postCard">
+         <header>
+         <h4 class="postTitle">Task #4: Quiz Preparation</h4>
+         </header>
+        <div class="postMetaRow">
+         <span class="postBadge">TODO</span>
+         <time class="postDate" datetime="2026-03-28">28 Mar 2026</time>
+        </div>
+      <footer>
+        <button class="btn deleteBtn">Delete</button>
+      </footer>
+     </article>
+    </li>
 
 
-<!-- TASK 5 -->
- <li class ="postItem">
-                <article class ="postCard">
-                
-                <h4 class ="postTitle" > Task #5: Complete Assignment</h4>
-                <div class ="postMetaRow">
-                    <span class ="postBadge"> TODO </span>
-                    <time class ="postDate" > Mar 26 </time>
-                </div>
-                <button class ="btn deleteBtn" > Delete </button>
-            </article>
-            </li>
- 
-
-          </ul>
+  <!-- TASK 5 -->
+    <li class="postItem">
+      <article class="postCard">
+       <header>
+        <h4 class="postTitle">Task #5: Complete Assignment</h4>
+      </header>
+      <div class="postMetaRow">
+        <span class="postBadge">TODO</span>
+        <time class="postDate" datetime="2026-03-26">Mar 26</time>
+      </div>
+      <footer>
+        <button class="btn deleteBtn">Delete</button>
+         </footer>
+         </article>
+        </li>
+        </ul>
         </section>
-
 
         <section class="card">
           <header class="cardHeader">
@@ -117,7 +131,7 @@
           <form class="postForm" id ="taskform">
 
             <div class="formRow">
-              <label class = "formLabel" >Title </label>
+              <label for = "title" class = "formLabel" >Title </label>
               <input
                 id="title"
                 name="title"
@@ -128,12 +142,12 @@
             </div>
 
             <div class="formRow">
-              <label class="formLabel"> Description </label>
+              <label for = "desc" class="formLabel"> Description </label>
               <textarea id ="desc" class ="formControl" ></textarea>
               </div>
 
               <div class ="formRow">
-                <label class ="formlabel"> Status</label>
+                <label for = "status" class ="formlabel"> Status</label>
                 <select id ="status" class ="formControl">
                     <option value =""> Select Status </option>
                     <option > TODO </option>
@@ -142,10 +156,8 @@
                 </select>
               </div>
             
-             
-           
             <div class="formRow">
-              <label  class="formLabel"> Due Date </label>
+              <label for ="date" class="formLabel"> Due Date </label>
               <input type="date" id="date" class="formControl">
             </div>
             <p id="error" style ="color:red" ></p>
