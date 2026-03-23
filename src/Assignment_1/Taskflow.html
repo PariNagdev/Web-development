@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <title>TaskFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+    <header class="siteHeader">
+      <div class="appBar">
+        <div class="headerLeft">
+          <a class="logoLink" href="/"></a>
+
+          <div class="brandBlock">
+            <h1 class="brandTitle">TaskFlow</h1>
+            <p class="brandSubtitle">Task Manager</p>
+          </div>
+        </div>
+        
+        <button class="loginBtn" id ="logoutBtn">Logout</button>
+      </div>
+
+      <nav class="navbar">
+        <a class="navItem Active" href="#">Dashboard</a>
+        <a class="navItem" href="#">Tasks</a>
+        <a class="navItem" href="#">New Task</a>
+      </nav>
+    </header>
+    <main class="container">
+      <h2>Task Dashboard</h2>
+      <p>Manage your tasks</p>
+      <div class="cardWrapper">
+        <section class="card">
+          <header class="cardHeader">
+            <h3 class="cardTitle">My tasks</h3>
+            <p class="cardDescription">Show List of Tasks</p>
+          </header>
+
+
+          <ul class="postList">
+            <!-- TASK 1 -->
+            <li class ="postItem">
+                <article class ="postCard">
+                
+                <h4 class ="postTitle" > Task #1: Complete Assignment</h4>
+                <div class ="postMetaRow">
+                    <span class ="postBadge"> TODO </span>
+                    <time class ="postDate" >25 Mar 26 </time>
+                </div>
+                <button class ="btn deleteBtn" > Delete </button>
+            </article>
+            </li>
+
+<!-- TASK 2 -->
+ <li class ="postItem">
+                <article class ="postCard">
+                
+                <h4 class ="postTitle" > Task #2: Study JavaSscript </h4>
+                <div class ="postMetaRow">
+                    <span class ="postBadge"> In Progress </span>
+                    <time class ="postDate" >26 Mar 2026 </time>
+                </div>
+                <button class ="btn deleteBtn" > Delete </button>
+            </article>
+            </li>
+<!-- TASK 3 -->
+ <li class ="postItem">
+                <article class ="postCard">
+                
+                <h4 class ="postTitle" > Task #3: Revise Html & CSS</h4>
+                <div class ="postMetaRow">
+                    <span class ="postBadge"> Done </span>
+                    <time class ="postDate" >20 Mar 2026 </time>
+                </div>
+                <button class ="btn deleteBtn" > Delete </button>
+            </article>
+            </li>
+
+            <!-- TASK 4 -->
+              <li class ="postItem">
+                <article class ="postCard">
+                
+                <h4 class ="postTitle" > Task #4: Quiz Preparationt</h4>
+                <div class ="postMetaRow">
+                    <span class ="postBadge"> TODO </span>
+                    <time class ="postDate" >28 Mar 2026 </time>
+                </div>
+                <button class ="btn deleteBtn" > Delete </button>
+            </article>
+            </li>
+
+
+<!-- TASK 5 -->
+ <li class ="postItem">
+                <article class ="postCard">
+                
+                <h4 class ="postTitle" > Task #5: Complete Assignment</h4>
+                <div class ="postMetaRow">
+                    <span class ="postBadge"> TODO </span>
+                    <time class ="postDate" > Mar 26 </time>
+                </div>
+                <button class ="btn deleteBtn" > Delete </button>
+            </article>
+            </li>
+ 
+
+          </ul>
+        </section>
+
+
+        <section class="card">
+          <header class="cardHeader">
+            <h3 class="cardTitle">Create Task </h3>
+            <p class="cardDescription">Form UI only</p>
+          </header>
+
+          <form class="postForm" id ="taskform">
+
+            <div class="formRow">
+              <label class = "formLabel" >Title </label>
+              <input
+                id="title"
+                name="title"
+                class="formControl"
+                type="text"
+                placeholder="Enter title ..."
+              >
+            </div>
+
+            <div class="formRow">
+              <label class="formLabel"> Description </label>
+              <textarea id ="desc" class ="formControl" ></textarea>
+              </div>
+
+              <div class ="formRow">
+                <label class ="formlabel"> Status</label>
+                <select id ="status" class ="formControl">
+                    <option value =""> Select Status </option>
+                    <option > TODO </option>
+                    <option > In Progress </option>
+                    <option> Done </option>
+                </select>
+              </div>
+            
+             
+           
+            <div class="formRow">
+              <label  class="formLabel"> Due Date </label>
+              <input type="date" id="date" class="formControl">
+            </div>
+            <p id="error" style ="color:red" ></p>
+
+            <div class="formActions">
+              <button type="Submit" class ="btn btnPrimary"> Create Task </button>
+              <script src="script.js"></script>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="siteFooter">
+      <div class="container footerInner">
+        <p class="footerText">© 2026 TaskFlow — CS4717 Web Technologies I</p>
+        <a class="footerLink" href="#">Privacy</a>
+      </div>
+    </footer>
+    
+  </body>
+   <script src="script.js"></script>
+</html>
